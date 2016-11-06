@@ -64,11 +64,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="DirCommand.h" />
+    <ClInclude Include="MkdirCommand.h" />
+    <ClInclude Include="RmdirCommand.h" />
     <ClInclude Include="Shell.h" />
+    <ClInclude Include="ShellCommand.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DirCommand.cpp" />
+    <ClCompile Include="MkdirCommand.cpp" />
+    <ClCompile Include="RmdirCommand.cpp" />
     <ClCompile Include="Shell.cpp" />
-    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
