@@ -6,6 +6,11 @@
 
 using namespace std;
 
+ShellCommand *RmdirCommand::create(const std::string &cmd){
+	return new RmdirCommand(cmd);
+}
+
+
 void RmdirCommand::execute(std::istream &in, std::ostream &out){
 	vector<string> tokens;
 	tokenize(command, tokens, " ", true);

@@ -32,7 +32,7 @@ static void get_directory_listing(const string &dir, vector<FileInfo>& out){
 	WIN32_FIND_DATA ffd;
 	LARGE_INTEGER filesize;
 	TCHAR szDir[MAX_PATH];
-	size_t length_of_arg;
+//	size_t length_of_arg;
 	HANDLE hFind = INVALID_HANDLE_VALUE;
 	DWORD dwError = 0;
 
@@ -94,6 +94,9 @@ static void get_directory_listing(const string &dir, vector<FileInfo>& out){
 	return;
 }
 
+ShellCommand *DirCommand::create(const std::string &cmd){
+	return new DirCommand(cmd);
+}
 
 void DirCommand::execute(std::istream &in, std::ostream &out){
 	vector<string> tokens;

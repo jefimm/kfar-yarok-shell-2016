@@ -6,6 +6,10 @@
 
 using namespace std;
 
+ShellCommand *MkdirCommand::create(const std::string &cmd){
+	return new MkdirCommand(cmd);
+}
+
 void MkdirCommand::execute(std::istream &in, std::ostream &out){
 	vector<string> tokens;
 	tokenize(command, tokens, " ", true);

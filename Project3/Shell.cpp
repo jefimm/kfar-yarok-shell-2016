@@ -8,8 +8,11 @@
 #include <vector>
 #include <list>
 #include <direct.h>
+#include <memory>
 
 #include "Shell.h"
+#include "CommandFactory.h"
+
 
 using namespace std;
 
@@ -21,26 +24,14 @@ int _tmain(int argc, TCHAR *argv[]){
 		getline(cin, inp);
 
 		cout << inp << endl;
-		// dir 
-		// dir directory
-		vector<string> tokens;
-		tokenize(inp, tokens, " ", true);
 
-		if (tokens.size() >= 1){
-			if (tokens[0] == "dir"){
-				
-			}
-			if (tokens[0] == "mkdir")
-			{
-
-			}
-			if (tokens[0] == "rmdir")
-			{
-				
-			}
+		try {
+			shared_ptr<ShellCommand> cmd(createCommand(inp));
+			cmd->execute(cin, cout);
 		}
-		
-
+		catch (string &err){
+			cerr << "Error:" << err << endl;
+		}
 	}
 
 	return 0; 

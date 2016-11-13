@@ -66,11 +66,13 @@
   <ItemGroup>
     <ClInclude Include="DirCommand.h" />
     <ClInclude Include="MkdirCommand.h" />
+    <ClInclude Include="CommandFactory.h" />
     <ClInclude Include="RmdirCommand.h" />
     <ClInclude Include="Shell.h" />
     <ClInclude Include="ShellCommand.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CommandFactory.cpp" />
     <ClCompile Include="DirCommand.cpp" />
     <ClCompile Include="MkdirCommand.cpp" />
     <ClCompile Include="RmdirCommand.cpp" />
