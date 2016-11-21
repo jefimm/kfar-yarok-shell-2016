@@ -10,22 +10,19 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3CBF5C43-5316-47D0-A0F1-2ED9707A348B}</ProjectGuid>
-    <RootNamespace>Project3</RootNamespace>
+    <ProjectGuid>{CFC44C1E-27D4-4107-A0A6-73026AFE0FAB}</ProjectGuid>
+    <RootNamespace>shelllib</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -50,8 +47,6 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>shell-lib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -68,6 +63,22 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Project3\CommandFactory.cpp" />
+    <ClCompile Include="..\Project3\DirCommand.cpp" />
+    <ClCompile Include="..\Project3\MkdirCommand.cpp" />
+    <ClCompile Include="..\Project3\RmdirCommand.cpp" />
+    <ClCompile Include="..\Project3\Shell.cpp" />
+    <ClCompile Include="..\Project3\ShellCommand.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Project3\CommandFactory.h" />
+    <ClInclude Include="..\Project3\DirCommand.h" />
+    <ClInclude Include="..\Project3\MkdirCommand.h" />
+    <ClInclude Include="..\Project3\RmdirCommand.h" />
+    <ClInclude Include="..\Project3\Shell.h" />
+    <ClInclude Include="..\Project3\ShellCommand.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

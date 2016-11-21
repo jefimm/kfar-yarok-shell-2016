@@ -4,6 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project3", "Project3\Project3.vcxproj", "{3CBF5C43-5316-47D0-A0F1-2ED9707A348B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CFC44C1E-27D4-4107-A0A6-73026AFE0FAB} = {CFC44C1E-27D4-4107-A0A6-73026AFE0FAB}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shell-lib", "shell-lib\shell-lib.vcxproj", "{CFC44C1E-27D4-4107-A0A6-73026AFE0FAB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shell-tests", "shell-tests\shell-tests.vcxproj", "{B6AD9F1E-7EF8-4ECE-B7D5-85125B149944}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CFC44C1E-27D4-4107-A0A6-73026AFE0FAB} = {CFC44C1E-27D4-4107-A0A6-73026AFE0FAB}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +25,14 @@ Global
 		{3CBF5C43-5316-47D0-A0F1-2ED9707A348B}.Debug|Win32.Build.0 = Debug|Win32
 		{3CBF5C43-5316-47D0-A0F1-2ED9707A348B}.Release|Win32.ActiveCfg = Release|Win32
 		{3CBF5C43-5316-47D0-A0F1-2ED9707A348B}.Release|Win32.Build.0 = Release|Win32
+		{CFC44C1E-27D4-4107-A0A6-73026AFE0FAB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CFC44C1E-27D4-4107-A0A6-73026AFE0FAB}.Debug|Win32.Build.0 = Debug|Win32
+		{CFC44C1E-27D4-4107-A0A6-73026AFE0FAB}.Release|Win32.ActiveCfg = Release|Win32
+		{CFC44C1E-27D4-4107-A0A6-73026AFE0FAB}.Release|Win32.Build.0 = Release|Win32
+		{B6AD9F1E-7EF8-4ECE-B7D5-85125B149944}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B6AD9F1E-7EF8-4ECE-B7D5-85125B149944}.Debug|Win32.Build.0 = Debug|Win32
+		{B6AD9F1E-7EF8-4ECE-B7D5-85125B149944}.Release|Win32.ActiveCfg = Release|Win32
+		{B6AD9F1E-7EF8-4ECE-B7D5-85125B149944}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

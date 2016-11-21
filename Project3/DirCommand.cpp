@@ -94,16 +94,14 @@ static void get_directory_listing(const string &dir, vector<FileInfo>& out){
 	return;
 }
 
-ShellCommand *DirCommand::create(const std::string &cmd){
-	return new DirCommand(cmd);
+ShellCommand *DirCommand::create(const std::vector<std::string> &_argv){
+	return new DirCommand(_argv);
 }
 
 void DirCommand::execute(std::istream &in, std::ostream &out){
-	vector<string> tokens;
-	tokenize(command, tokens, " ", true);
 
 	vector<FileInfo> list;
-	get_directory_listing(tokens[1], list);
+	get_directory_listing(argv[1], list);
 	for (auto it = list.begin(); it != list.end(); ++it){
 		if (it->isDir()){
 			out << "DIR " << it->getname() << endl;

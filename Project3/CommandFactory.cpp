@@ -9,7 +9,7 @@
 
 using namespace std;
 
-static const map<string, ShellCommand *(*)(const std::string &cmd) > commandMap = {
+static const map<string, ShellCommand *(*)(const std::vector<std::string> &_argv) > commandMap = {
 	{ "dir",	&DirCommand::create },
 	{ "mkdir",	&MkdirCommand::create },
 	{ "rmdir",	&RmdirCommand::create }
@@ -25,7 +25,7 @@ ShellCommand *createCommand(const string &inp){
 
 	auto mapEntry = commandMap.find(tokens[0]);
 	if (mapEntry != commandMap.end()){
-		return (*mapEntry->second)(inp);
+		return (*mapEntry->second)(tokens);
 	}
 
 	throw string("Unrecognized command " + inp);

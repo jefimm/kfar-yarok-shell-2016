@@ -17,8 +17,9 @@
 using namespace std;
 
 
-int _tmain(int argc, TCHAR *argv[]){
-	while (true){
+int shellMain(int argc, TCHAR *argv[]){
+
+	while (cin.good()){
 		string inp;
 		cout << ">";
 		getline(cin, inp);
