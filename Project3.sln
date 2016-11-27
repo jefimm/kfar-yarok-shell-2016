@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project3", "Project3\Project3.vcxproj", "{3CBF5C43-5316-47D0-A0F1-2ED9707A348B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shell", "Project3\Project3.vcxproj", "{3CBF5C43-5316-47D0-A0F1-2ED9707A348B}"
 	ProjectSection(ProjectDependencies) = postProject
 		{CFC44C1E-27D4-4107-A0A6-73026AFE0FAB} = {CFC44C1E-27D4-4107-A0A6-73026AFE0FAB}
 	EndProjectSection

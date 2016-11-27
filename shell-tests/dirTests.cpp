@@ -7,11 +7,11 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace shelltests
 {		
-	TEST_CLASS(UnitTest1)
+	TEST_CLASS(DirUnitTest1)
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(TestDir1)
 		{
 			vector<string> args = {
 				string("dir"),
@@ -31,6 +31,5 @@ namespace shelltests
 			delete obj;
 
 		}
-
 	};
 }

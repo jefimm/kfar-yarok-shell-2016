@@ -11,8 +11,7 @@ ShellCommand *MkdirCommand::create(const std::vector<std::string> &_argv){
 }
 
 void MkdirCommand::execute(std::istream &in, std::ostream &out){
-	if (_mkdir(argv[1].c_str()) == 0)
-	{
+	if (_mkdir(argv[1].c_str()) == 0) {
 		cout << "DIRECTORY " << argv[1] << " created" << endl;
 	}	else	{
 		throwError("problem creating directory due to error ");
